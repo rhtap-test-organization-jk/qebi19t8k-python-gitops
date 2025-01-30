@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: qebi19t8k-python-gitops
+  description: This is GitOps manifest for qebi19t8k-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: qebi19t8k-python
+    backstage.io/kubernetes-id: qebi19t8k-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: qebi19t8k-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:qebi19t8k-python

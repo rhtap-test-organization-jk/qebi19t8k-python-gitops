@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: qebi19t8k-python
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: qebi19t8k-python 
+  name: qebi19t8k-python
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: qebi19t8k-python 
